@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS GAME</title>
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Stone paper Scissor game -->
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    
+    <h1>Rock Paper Scissor</h1>
+    
+    <div class=" btn">
+
+        <button onclick="
+        userMove = 'Rock';
+        captureUserMove('Rock');
+        generateComputerMove();
+        evaluatemoves();
+        updategamescore();
+        // alert(result);
+        console.log(result);
+        rendergamesummary();
+        rendergamehistory();
+        ">
+            <img src="images/rock.png" alt="ROCK"></button>
+
+
+        <button onclick="
+        userMove = 'Paper';
+        captureUserMove('Paper');
+        generateComputerMove();
+        evaluatemoves();
+        updategamescore();
+        console.log(result);
+        // alert(result);
+        rendergamesummary();
+        rendergamehistory();
+        ">
+            <img src="images/paper.png" alt="PAPER"></button>
+
+        <button onclick="
+        userMove = 'Scissor';
+        captureUserMove('Scissor');
+        generateComputerMove();
+        evaluatemoves();
+        updategamescore()
+        // alert(result);
+        console.log(result);
+        rendergamesummary();
+        rendergamehistory();
+        ">
+            <img src="images/scissors.png" alt="SCISSORS"></button>
+
+
+        <button onclick="resetscores();
+        rendergamesummary();
+        rendergamehistory();"><img id="res" src="images/reset.jpg" alt="reset"></button>
+    </div>
+    <p id="snackbar">Hello! you </p>
+
+    <h2>Game Summary</h1>
+        <div id="GS">
+            <table>
+                <tr>
+                    <th>Wins</th>
+                    <th>Looses</th>
+                    <th>Ties</th>
+                    <th>Played</th>
+                </tr>
+                <tr>
+                    <td id="wins">0</td>
+                    <td id="lose">0</td>
+                    <td id="tie">0</td>
+                    <td id="gameplayed">0</td>
+                </tr>
+            </table>
+        </div>
+        
+        <h2>Game History</h1>
+            <table id="gameHistory">
+                <tr>
+                    <th>#</th>
+                    <th>User Move</th>
+                    <th>Computer Move</th>
+                    <th>Result</th>
+                </tr>
+            </table>
+</body>
+<script src="rps.js"></script>
+
+</html>
